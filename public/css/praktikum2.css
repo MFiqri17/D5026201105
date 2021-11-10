@@ -1,0 +1,44 @@
+.card {
+    background-color: #303030;
+}
+
+.container {
+    padding: 2% 5%;
+}
+
+@media (min-width:900px) {
+    .container {
+        padding: 5% 25%;
+    }
+}
+
+label {
+    color: #C3FF00;
+}
+
+label.error {
+    color: red; 
+}
+
+.card-header {
+    font-size: 2rem;
+    background: #C3FF00;
+}
+
+.btn-primary {
+    background-color: #C3FF00;
+    border: none !important;
+    color: #303030;
+}
+
+.btn-primary:focus {
+     background-color: #C3FF00;
+    border: none !important;
+    color: #303030;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #C3FF00;
+    border: 2px solid #C3FF00 !important;
+}

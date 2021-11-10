@@ -1,0 +1,398 @@
+   /* Font Family Sets */
+        @font-face {
+            font-family: "Hind Bold";
+            src: url("/fonts/Hind-Bold.ttf");
+        }
+
+        @font-face {
+            font-family: "Hind Semi Bold";
+            src: url("/fonts/Hind-SemiBold.ttf");
+        }
+
+        @font-face {
+            font-family: "Hind Regular";
+            src: url("/fonts/Hind-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "Mosk Extra-bold";
+            src: url("/fonts/Mosk Ultra-Bold 900.ttf");
+        }
+
+        @font-face {
+            font-family: "Mosk 500";
+            src: url("/fonts/Mosk\ Medium\ 500.ttf");
+        }
+
+        @font-face {
+            font-family: "Mosk 400";
+            src: url("/fonts/Mosk\ Normal\ 400.ttf");
+        }
+
+        @font-face {
+            font-family: "Mosk Ultra-bold";
+            src: url("/fonts/Mosk\ Ultra-Bold\ 900.ttf");
+        }
+
+        .hindbold {
+            font-family: "Hind Bold";
+        }
+
+        .hindsemi {
+            font-family: "Hind Semi Bold";
+        }
+
+        .hindreg {
+            font-family: "Hind Regular";
+        }
+
+        .moskextra {
+            font-family: "Mosk Extra-bold";
+        }
+
+        .mosk500 {
+            font-family: "Mosk 500";
+        }
+
+        .mosk400 {
+            font-family: "Mosk 400";
+        }
+
+        .moskultra {
+            font-family: "Mosk Ultra-bold";
+        }
+
+        /* End */
+
+
+        /* General */
+
+        body {
+            background: url("/img/tugas 2/bgdong.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            scroll-behavior: smooth;
+        }
+
+
+        a {
+            text-decoration: none !important;
+            color: #fff;
+        }
+
+       
+
+        li {
+            list-style: none !important;
+        }
+
+        /* End */
+
+
+
+
+        /* Navbar section start */
+
+
+        .navbar {
+
+
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            color: #fff;
+            margin-bottom: 80px;
+
+        }
+
+        .navbar .list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+
+        .navbar .list li {
+            padding: 0rem 1rem;
+            font-size: 1.2rem;
+        }
+
+        .navbar .list li a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+  
+        .navbar .list li:hover {
+            transform: translateY(-3px);
+
+            border-bottom: 3px solid #fff;
+            transition: all 0.2s;
+        }
+
+
+        /* Navbar Media Query */
+
+        /* 
+        @media (max-width: 769px) {
+            .navbar{
+                flex-direction: column;
+                font-size: 0.8em;
+            }
+            
+
+        }
+
+        @media (max-width: 569px) {
+            .navbar{
+
+                flex-direction: column;
+                font-size: 1rem;
+            }
+
+            .navbar h2 {
+                text-align: center;
+            }
+
+            .navbar .list{
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+ */
+        /* End */
+
+
+
+        /* About section start */
+
+        #about {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 150px;
+            padding-top: 30px;
+        }
+
+        #about .mine {
+            margin-right: 2rem;
+
+        }
+
+        #about .makingflex {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 30px;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 30px;
+        }
+
+        #about ul {
+            font-size: 1.2rem;
+        }
+
+        #about ul li {
+            list-style: none;
+            padding: 5px;
+        }
+
+        
+
+        #about .fas {
+            padding-right: 10px;
+            color: blueviolet;
+        }
+
+        #about .fas .fa-spider {
+            padding: 0px 10px;
+            color: blueviolet;
+        }
+
+       #about .mine a:hover {
+            background-color: blueviolet;
+            box-shadow:  0 3px 5px grey;
+        }
+
+        /* End */
+
+
+
+        /* Skills Section Start */
+
+        #skills {
+            color: #fff;
+           
+        }
+
+      
+
+        #skills .fas {
+            padding-right: 10px;
+            color: blueviolet;
+        }
+
+        #skills .fas .fa-trophy {
+            padding: 10px;
+            color: blueviolet;
+        }
+
+        #skills .makingflex {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        #skills h2 {
+            font-size: 2rem;
+            text-align: center;
+            padding: 30px;
+        }
+
+
+        #skills h3 {
+            font-size: 1.5rem;
+        }
+
+        #skills li {
+            font-size: 1.3rem;
+        }
+
+
+        #skills .hard {
+            
+            border: 3px solid blueviolet;
+            padding: 3.5rem;
+            border-radius: 20px;
+        }
+
+        #skills .soft {
+            border: 3px solid blueviolet;
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+
+        /* End */
+
+
+        /* Education Section Start */
+        #education {
+            padding-top: 30px;
+            margin-top: 130px;
+            text-align: center;
+            color: #fff;
+        }
+
+        #education .edu {
+            display: flex;
+            justify-content: space-around;
+            padding-right: 90px;
+        }
+
+        #education h2 {
+            font-size: 2rem;
+            
+        }
+
+        #education h3 {
+            font-size: 1.5rem;
+        }
+
+        #education li {
+            font-size: 1.3rem;
+        }
+
+        #education .fas  {
+            padding: 0px 10px;
+            color: blueviolet;
+        }
+        /* End */
+
+
+
+
+
+        #medan {
+            padding-top: 30px;
+            margin-top: 150px;
+            text-align: center;
+            color: #fff;
+        }
+
+        #medan h2{
+            font-size: 2rem;
+        }
+
+        #medan table {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            
+        }
+
+        #medan .fas {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: blueviolet;
+        }
+
+        tr,th,td {
+            border: 3px solid;
+            border-color: blueviolet;
+            padding: 5px;
+            border-collapse: collapse !important;
+        }
+
+
+
+
+
+        #location {
+            margin-top: 100px;
+            text-align: center;
+            color: white;
+        }
+
+        #location h2{
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+
+
+
+
+        #contact {
+            width: 100%;
+            text-align: center;   
+            margin-top: 150px; 
+            background: linear-gradient(180deg, #110018 0%, #380052 79.44%);
+            background-size: cover;
+        }
+
+        #contact h2 {
+            padding-top: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        #contact i {
+            padding: 30px;
+            font-size: 100px;
+        }
+
+        #contact  .far {
+            font-size: 30px;
+        }
+
+        #contact h4 {
+            color: #fff;
+            font-size: 1.3rem;
+        }

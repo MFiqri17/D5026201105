@@ -1,0 +1,199 @@
+* {
+  margin: 0 ;
+  padding: 0 ;
+}
+
+body {
+    font-family: IBM Plex Sans;
+   
+}
+
+nav {
+    font-size: 2rem;
+    background-color: #303030;
+    color: white;
+}
+
+.nav-link {
+     color: white;
+}
+
+.nav-link:hover {
+        cursor: pointer;
+    color: yellowgreen;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary {
+      background-color: transparent;
+       border-color: white;
+    padding: 10px 50px;
+    color: #C3FF00;
+}
+
+.btn-primary:hover {
+    background-color: #C3FF00;
+    color: #303030;
+    
+}
+
+
+
+
+#buton {
+   padding: 50px;
+    background-color: #535353;
+    margin-top: 4rem;
+    position: sticky;
+    display: none;
+}
+
+#contact {
+    margin-top: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section {
+    padding: 100px 0;
+    position: relative;
+    display: none;
+}
+.gray-bg {
+    background-color: #535353;
+}
+
+.about-avatar img {
+    max-width: 100%;
+      vertical-align: middle;
+    border-style: none;
+    border-radius: 50%;
+}
+
+/* About Me 
+---------------------*/
+.about-text h3 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+@media (max-width: 767px) {
+  .about-text h3 {
+    font-size: 35px;
+  }
+}
+.about-text h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .about-text h6 {
+    font-size: 18px;
+  }
+}
+.about-text p {
+  font-size: 18px;
+  max-width: 450px;
+  color: white;
+}
+.about-text p mark {
+  font-weight: 600;
+  color: white;
+}
+
+
+
+@media (max-width: 991px) {
+  .about-avatar {
+    margin-top: 30px;
+  }
+}
+mark {
+    background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-color: transparent;
+    padding: 0;
+    color: currentColor;
+}
+.theme-color {
+    color: greenyellow;
+}
+.dark-color {
+    color: #C3FF00;
+}
+
+.social-links a {
+  font-size: 30px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 10px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #C3FF00;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+#card {
+    margin-top: 5rem;
+}
+
+#card .btn-success {
+    background: transparent;
+    color: #212431;
+    border: 2px solid green;
+    font-size: 1.4rem;
+}
+
+#card .card {
+    border: none;
+}
+
+#card .card img {
+    height: 80%;
+    width: 50%;
+}
+
+@media (max-width: 500px) {
+    #card .card img {
+        width: 100%;
+    }
+}
+
+#card h3 {
+    font-size: 2rem;
+}
+
+#card .card-title {
+    font-size: 1.8rem;
+}
+
+.card-text1, .card-text2, .card-text3, .card-text4 {
+    font-size: 1.3rem;
+    display: none;
+}

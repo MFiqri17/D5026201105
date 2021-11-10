@@ -1,0 +1,36 @@
+body {
+    overflow-x: hidden;
+    background: black;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.title {
+    color: white;
+}
+
+ .btn-primary {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+ .btn-primary:hover {
+    background: black;
+}
+
+ .btn-primary:focus {
+    background: transparent;
+}
+
+main {
+    color: #fff;
+}
+
+main .card {
+    border: 2px solid #fff;
+    background: transparent;
+}
+

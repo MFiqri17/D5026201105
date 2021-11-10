@@ -1,0 +1,168 @@
+  @font-face {
+            font-family: "Hind Bold";
+            src: url("/font/Hind-Bold.ttf");
+        }
+
+        @font-face {
+            font-family: "Hind Semi-bold";
+            src: url("/font/Hind-SemiBold.ttf");
+        }
+
+        @font-face {
+            font-family: "Hind Regular";
+            src: url("/font/Hind-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "Hind Medium";
+            src: url("/font/Hind-Medium.ttf");
+        }
+
+        .hindbold {
+            font-family: "Hind Bold";
+        }
+
+        .hindreg {
+            font-family: "Hind Regular";
+        }
+
+        .hindmed {
+            font-family: "Hind Medium";
+        }
+
+        .hindsem {
+            font-family: "Hind Semi-bold";
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #008000 !important;
+        }
+
+        body {
+            background: url("/img/tugas 3/79-792626_aesthetic-mint-green-background-pastel.jpg") !important;
+        }
+
+        .btn-primary {
+            background-color: #008000;
+            font-size: 1.2rem;
+        }
+
+
+        .bg-primary {
+            background-color: #008000 !important;
+        }
+
+        .navbar {
+            font-family: "Hind";
+            background-color: lightgreen;
+        }
+
+        .navbar li a {
+            font-size: 1.3rem;
+            color: #008000;
+            transition: all 0.3s;
+        }
+
+
+        .navbar .nav-item a:hover {
+            border-bottom: 3px solid #008000;
+
+            transform: translateY(-5px);
+        }
+
+        .navbar-toggler {
+            color: #008000;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("/img/tugas 3/hamburger.png") !important;
+        }
+
+        .wiki {
+            font-size: 1.3rem;
+        }
+
+        .wiki:hover {
+            background: transparent !important;
+            box-shadow: 0 7px 10px grey;
+            border: 3px solid #008000;
+            color: #008000;
+            transition: all 0.5s;
+        }
+
+        .wiki2 {
+            font-size: 1.3rem;
+        }
+
+        .wiki2:hover {
+            background: transparent !important;
+            box-shadow: 0 7px 10px grey;
+            border: 3px solid #008000;
+            color: #008000;
+            transition: all 0.5s;
+        }
+
+        @media (max-width : 992px) {
+
+            .navbar li a {
+                color: #fff;
+            }
+
+            .navbar li a:hover {
+                border-bottom: none !important;
+                color: lightgreen !important;
+                transform: none !important;
+            }
+
+            .navbar-collapse .navbar-nav {
+                background-color: #008000;
+                position: relative;
+                top: 10px;
+                border-radius: 10%;
+            }
+
+            .wiki2:hover {
+            background: transparent !important;
+            box-shadow: 0 7px 10px grey;
+            border: 3px solid lightgreen;
+            color: #fff;
+            transition: all 0.5s;
+        }
+
+
+        }
+
+        @media (max-width : 300px) {
+            .wiki {
+                font-size: 0.9rem;
+            }
+            .wiki2{
+                font-size: 0.9rem;
+            }
+        }
+
+
+
+
+        #intro {
+            margin-top: 15rem;
+        }
+
+        #intro h2 {
+            font-size: 2rem;
+        }
+
+        #intro p {
+            font-size: 1.3rem;
+        }
+
+        #intro p a {
+            text-decoration: none !important;
+            color: #008000;
+        }
+
+        #intro p a:hover {
+            border-bottom: 3px solid #008000;
+            transition: all 0.5s;
+        }
