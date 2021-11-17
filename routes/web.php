@@ -36,4 +36,14 @@ Route::get('tugasPHP', [pageController::class, 'indexPHP']);
 Route::post('resultPHP', [pageController::class, 'resultPHP']);
 
 
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+
+
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+
+
+Route::post('/pegawai/store','PegawaiController@store');
+
+
 
