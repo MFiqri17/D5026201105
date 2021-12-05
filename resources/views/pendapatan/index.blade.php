@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('templates.dashboard');
+<!-- @section('title', 'Data Pendapatan') -->
+@section('name', 'Dashboard Pendapatan')
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+@section('dashboard')
 
-</head>
-<body class="container mt-5 m-6">
  
-
-	<h3>Data Pendapatan</h3>
-	<a class="btn btn-success" href="/pendapatan/tambah"> + Tambah Pendapatan Baru</a>
-	
-	<br/>
-	<br/>
- 
-	<table  class="table table-hover">
-		<tr class="table-primary">
+	<table  class="table">
+		<tr  class="table-success">
 			<th>ID</th>
 			<th>IDPegawai</th>
 			<th>Bulan</th>
@@ -30,8 +16,8 @@
             <th>Opsi</th>
 		</tr>
 		@foreach($pendapatan as $p)
-		<tr>
-            <div class="table-success">
+		<tr style="color: white; ">
+            <div  class="table-success">
 			<td>{{ $p->ID }}</td>
 			<td>{{ $p->IDPegawai }}</td>
 			<td>{{ $p->Bulan }}</td>
@@ -47,8 +33,9 @@
 		</tr>
 		@endforeach
 	</table>
+
+		<a class="btn btn-success" href="/pendapatan/tambah"> + Tambah Pendapatan Baru</a>
     
- 
- 
-</body>
-</html>
+
+
+@endsection

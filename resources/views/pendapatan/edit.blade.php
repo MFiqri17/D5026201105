@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
 
-	
-	<h3>Edit Pendapatan</h3>
 
-	<a href="/pendapatan"> Kembali</a>
+
+
+
+
+@extends('templates.dashboard');
+<!-- @section('title', 'Data Pendapatan') -->
+@section('name', 'Edit Pendapatan')
+
+@section('dashboard')
+
+ 
 	
-	<br/>
-	<br/>
+	<<a href="/pendapatan"> Kembali</a>
+	
+	
 
 	@foreach($pendapatan as $p)
 	<form action="/pendapatan/update" method="post">
@@ -25,8 +28,6 @@
         Tunjangan <input type="number" name="Tunjangan" required="required" value="{{ $p->Tunjangan }}"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
-	@endforeach
-		
+	@endforeach 
+@endsection
 
-</body>
-</html>

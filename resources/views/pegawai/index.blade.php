@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-	
-	<br/>
-	<br/>
 
-	<table border="1">
-		<tr>
+@extends('templates.dashboard');
+<!-- @section('title', 'Data Pendapatan') -->
+@section('name', 'Dashboard Pegawai')
+
+@section('dashboard')
+
+ 
+	<table  class="table">
+		<tr  class="table-success">
 			<th>Nama</th>
 			<th>Jabatan</th>
 			<th>Umur</th>
 			<th>Alamat</th>
 			<th>Opsi</th>
 		</tr>
-		@foreach($pegawai as $p)
-		<tr>
-			<td>{{ $p->pegawai_nama }}</td>
+			@foreach($pegawai as $p)
+		<tr style="color: white;">
+            <td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
@@ -36,6 +31,8 @@
 		@endforeach
 	</table>
 
+		<a class="btn btn-success"  href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+    
 
-</body>
-</html>
+
+@endsection
