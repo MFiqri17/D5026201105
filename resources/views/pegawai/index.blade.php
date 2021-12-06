@@ -10,7 +10,7 @@
  
 	<table  class="table">
 		<tr  class="table-success">
-			<th>Nama</th>
+			<th >Nama</th>
 			<th>Jabatan</th>
 			<th>Umur</th>
 			<th>Alamat</th>

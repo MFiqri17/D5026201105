@@ -8,7 +8,9 @@
     <!-- Bootstrap / CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link href="css/dashboard.css" rel="stylesheet" />
+    <link href="/css/dashboard.css" rel="stylesheet" />
+    @yield('css')
+
     <title>Hello, world!</title>
   </head>
   <body>
@@ -21,8 +23,8 @@
   <header id="header">
     <div class="d-flex flex-column">
 
-      <div class="profile">
-        <img src="img/dashboard/profile header.jpg" alt="" class="img-fluid rounded-circle">
+      <div class="profile text-center">
+        <img src="/img/dashboard/profile header.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">M. Fiqri Ananda</a></h1>
         <h1 class="text-light">5026201105</h1>
       </div>
@@ -32,6 +34,8 @@
           <li><a href="/pegawai" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Pegawai</span></a></li>
           <li><a href="/absen" class="nav-link scrollto"><i class="bx bx-file-blank"></i>  <span>Absen</span></a></li>
           <li><a href="/pendapatan" class="nav-link scrollto"><i class='bx bx-money-withdraw'></i><span>Pendapatan</span></a></li>
+          <li><a href="" class="nav-link scrollto"><i class='bx bx-calendar-week'></i><span>Minggu Depan</span></a></li>
+          <li><a href="" class="nav-link scrollto"><i class='bx bx-expand-horizontal'></i><span>Praktikum</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -51,6 +55,16 @@
   </div>
     </main>
   
+
+   
+  <footer id="footer" style="margin-top= 120px;">
+    <div class="container">
+      <div class="copyright">
+        &copy; Hak Cipta oleh <strong>
+         <br> <span>5026201105 - M. Fiqri Ananda</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 

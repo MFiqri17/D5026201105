@@ -37,5 +37,6 @@
 		<a class="btn btn-success" href="/pendapatan/tambah"> + Tambah Pendapatan Baru</a>
     
 
+	
 
 @endsection
