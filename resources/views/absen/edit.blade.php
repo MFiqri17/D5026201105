@@ -42,7 +42,7 @@
                         <div class='col-sm-4 input-group date' id='nama'>
                             <select class="form-control" name="idpegawai">
                                 @foreach($pegawai as $p )
-                                    <option value="{{ $p->pegawai_id }}" @if($p->pegawai_id===$a->IDPegawai) selected="selected" @endif> {{ $p->pegawai_nama }}</option>
+                                    <option value="{{ $p->pegawai_id }}" @if($p->pegawai_id===$a->IDPegawai) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
                                 @endforeach
                             </select>
                         </div>
