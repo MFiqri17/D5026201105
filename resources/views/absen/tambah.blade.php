@@ -1,21 +1,40 @@
-@extends('templates.happy')
-@section('title', 'Data Absen')
-@section('judulhalaman', 'DATA ABSEN')
 
-@section('konten')
-    <a href="/absen"> Kembali</a>
 
-    <br />
-    <br />
+
+
+
+
+@extends('templates.dashboard')
+@section('name', 'Tambah Pendapatan')
+
+@section('boot')
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+@endsection
+
+
+@section('css')
+<link href="/css/form.css" rel="stylesheet" />
+@endsection
+
+
+@section('dashboard')
+
+ 
+
 
     <form action="/absen/store" method="post">
         {{ csrf_field() }}
+
+        <div class="card">
+              <div class="card-header ">Form Tambah Data Pegawai</div>
+        <div class="card-body">
+
         <div class="container">
 
             <div class="row">
-                <div class='col-lg-9'>
+                <div class='col-lg-12'>
                     <div class="form-group">
-                        <label for="nama" class="col-sm-2 control-label">Nama Pegawai :</label>
+                        <label for="nama" class="col-sm-2 control-label">Nama Pegawai </label>
                         <div class='col-sm-4 input-group date' id='nama'>
                             <select class="form-control" name="idpegawai">
                                 @foreach($pegawai as $p )
@@ -29,9 +48,9 @@
 
 
             <div class="row">
-                <div class='col-lg-9'>
+                <div class='col-lg-12'>
                     <div class="form-group">
-                        <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
+                        <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal </label>
                         <div class='col-sm-4 input-group date' id='dtpickerdemo'>
                             <input type='text' class="form-control" name="tanggal" required="required" />
                             <span class="input-group-addon">
@@ -50,13 +69,56 @@
                     });
                 </script>
             </div>
-        </div>
-        Status
-        <input type="radio" id="h" name="status" value="H">
+
+
+             <div class="row">
+                <div class='col-lg-12'>
+                    <div class="form-group">
+                        <label for="nama" class="col-sm-2 control-label">Status </label>
+                        <div class='col-sm-4 input-group date' id='nama'>
+                            <input type="radio" id="h" name="status" value="H">
         <label for="h">HADIR</label><br>
         <input type="radio" id="a" name="status" value="A" checked="checked">
         <label for="a">TIDAK HADIR</label><br>
-        <input type="submit" value="Simpan Data">
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row mt-5">
+              <div
+                class="d-flex flex-lg-row flex-column justify-content-start"
+              >
+                <a href="/absen">
+                <button
+                 
+                  class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
+                >
+                  Kembali
+                </button>
+                </a>
+                 <input type="submit" class="btn blue btn-primary btn-lg" value="Simpan Data" > 
+                </div>
+            </div>
+              
+
+        </div>
+      
+                </div>
+                </div>
+        </div>
     </form>
+
+
+
+	
+
 @endsection
+
+
+
+
+
 

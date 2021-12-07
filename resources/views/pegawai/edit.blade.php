@@ -1,33 +1,4 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
- 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
- 
-	<a href="/pegawai"> Kembali</a>
-	
-	<br/>
-	<br/>
- 
-	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
-		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
-		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-		Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
-	@endforeach
-		
- 
-</body>
-</html> -->
+
 
 @extends('templates.dashboard')
 @section('name', 'Edit Pegawai')
@@ -111,25 +82,4 @@
 
 
 
-   <!-- <div class="row justify-content-around">
-              <label class="col-lg-5 form-label">
-                <h2> Jenis Barang  </h2>
-              </label>
-              <div class="col-lg-7">
-                <select id="state" name="barang" class="form-select">
-                  <option disabled selected value=""></option>
-                  <option value="1">Makanan</option>
-                  <option value="2">Minuman</option>
-                  <option value="3">Non Manim</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="row my-5 justify-content-around">
-              <label class="col-lg-5 form-label">
-                <h2> Kode Barcode </h2>
-              </label>
-              <div class="col-lg-7">
-                <input type="text" class="form-control" id="kode" name="kode" />
-              </div>
-            </div> -->
+   

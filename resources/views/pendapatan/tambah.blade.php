@@ -1,64 +1,109 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
-
-	
-	<h3>Data Pendapatan</h3>
-
-	<a href="/pendapatan"> Kembali</a>
-	
-	<br/>
-	<br/>
-
-	<form action="/pendapatan/store" method="post">
-		{{ csrf_field() }}
-		IDPegawai <input type="number" name="IDPegawai" required="required"> <br/>
-		Bulan <input type="number" name="Bulan" required="required"> <br/>
-        Tahun <input type="" name="Tahun" required="required"> <br/>
-        Gaji <input type="number" name="Gaji" required="required"> <br/>
-        Tunjangan <input type="number" name="Tunjangan" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
-
-</body>
-</html> -->
-
-
-
-
-
 
 
 
 @extends('templates.dashboard')
-<!-- @section('title', 'Data Pendapatan') -->
-@section('name', 'Edit Pendapatan')
+@section('name', 'Tambah Pendapatan')
+
+@section('css')
+<link href="/css/form.css" rel="stylesheet" />
+@endsection
 
 @section('dashboard')
 
  
 	
-	<h3>Data Pendapatan</h3>
 
-	<a href="/pendapatan"> Kembali</a>
-	
-	<br/>
-	<br/>
 
-	<form action="/pendapatan/store" method="post">
-		{{ csrf_field() }}
-		IDPegawai <input type="number" name="IDPegawai" required="required"> <br/>
-		Bulan <input type="number" name="Bulan" required="required"> <br/>
-        Tahun <input type="" name="Tahun" required="required"> <br/>
-        Gaji <input type="number" name="Gaji" required="required"> <br/>
-        Tunjangan <input type="number" name="Tunjangan" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
+	<div class="card">
+        <div class="card-header text-right">Form Tambah Data Pendapatan</div>
+        <div class="card-body">
+			
+          <form  id="validation" class="row g-3" action="/pendapatan/update" method="post" >
+
+		 	 {{ csrf_field() }}
+			 
+            <div class="row mt-3 justify-content-around">
+              <label class="col-lg-5 form-label">
+                <h2> ID</h2>
+              </label>
+              <div class="col-lg-7">
+                <input class="form-control" type="number" name="ID" required="required"  >
+              </div>
+            </div>
+
+            <div class="row my-3 justify-content-around">
+              <label class="col-lg-5 form-label">
+                <h2> IDPegawai  </h2>
+              </label>
+              <div class="col-lg-7">
+                <input  class="form-control"  type="number" name="IDPegawai" required="required"  >
+              </div>
+            </div>
+
+             <div class="row mb-3 justify-content-around">
+              <label class="col-lg-5 form-label">
+                <h2> Bulan  </h2>
+              </label>
+              <div class="col-lg-7">
+                <input class="form-control" type="number" name="Bulan" required="required"  >
+              </div>
+            </div>
+
+            <div class="row justify-content-around">
+              <label class="col-lg-5 form-label">
+                <h2> Tahun  </h2>
+              </label>
+              <div class="col-lg-7">
+               <input class="form-control" type="" name="Tahun" required="required"  >
+              </div>
+            </div>
+
+			
+			     <div class="row my-3 justify-content-around">
+              <label class="col-lg-5 form-label">
+                <h2> Gaji  </h2>
+              </label>
+              <div class="col-lg-7">
+                <input  class="form-control" type="number" name="Gaji" required="required"  >
+              </div>
+            </div>
+
+
+			     <div class="row my-3 justify-content-around">
+              <label class="col-lg-5 form-label">
+                <h2> Tunjangan  </h2>
+              </label>
+              <div class="col-lg-7">
+                <input  class="form-control" type="number" name="Tunjangan" required="required"  >
+              </div>
+            </div>
+
+
+         
+            <div class="row mt-5">
+              <div
+                class="d-flex flex-lg-row flex-column justify-content-center"
+              >
+                <a href="/pendapatan">
+                <button
+                 
+                  class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
+                >
+                  Kembali
+                </button>
+                </a>
+                 <input type="submit" class="btn blue btn-primary btn-lg" value="Simpan Data">
+              </div>
+            </div>
+          </form>
+          	
+        </div>
+      </div>
+
+
 
 @endsection
+
 
 
 
