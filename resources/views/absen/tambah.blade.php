@@ -1,11 +1,6 @@
-
-
-
-
-
-
 @extends('templates.dashboard')
-@section('name', 'Tambah Pendapatan')
+@section('title', 'Tambah Absen')
+@section('name', 'Tambah Absen')
 
 @section('boot')
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">

@@ -10,7 +10,12 @@ class PendapatanController extends Controller
     public function index()
     {
     	// mengambil data dari table pegawai
-    	$pendapatan = DB::table('pendapatan')->get();
+    	// $pendapatan = DB::table('pendapatan')->get();
+        $pendapatan = DB::table('pendapatan')
+        ->join('pegawai', 'IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('pendapatan.*', 'pegawai.pegawai_nama')
+        ->paginate(5);
+
  
     	// mengirim data pegawai ke view index
     	return view('pendapatan.index',['pendapatan' => $pendapatan]);
@@ -18,19 +23,29 @@ class PendapatanController extends Controller
     }
 
     // method untuk menampilkan view form tambah pegawai
-    public function tambah()
-    {
+    // public function tambah()
+    // {
 
-        // memanggil view tambah
-        return view('pendapatan.tambah');
+    //     // memanggil view tambah
+    //     return view('pendapatan.tambah');
 
-    }
+    // }
+
+
+        public function tambah()
+{
+    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
+	// memanggil view tambah
+	return view('pendapatan.tambah',['pegawai' => $pegawai]);
+
+}
+
     // method untuk insert data ke table pegawai
     public function store(Request $request)
     {
         // insert data ke table pegawai
         DB::table('pendapatan')->insert([
-            'ID' => $request->ID,
             'IDPegawai' => $request->IDPegawai,
             'Bulan' => $request->Bulan,
             'Tahun' => $request->Tahun,
@@ -41,11 +56,20 @@ class PendapatanController extends Controller
         return redirect('/pendapatan');
 
     }
+
+
+
+
+
+
     // method untuk edit data pegawai
     public function edit($id)
     {
         // mengambil data pegawai berdasarkan id yang dipilih
         $pendapatan = DB::table('pendapatan')->where('ID',$id)->get();
+
+
+      
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('pendapatan.edit',['pendapatan' => $pendapatan]);
 
@@ -55,7 +79,6 @@ class PendapatanController extends Controller
     {
         // update data pegawai
         DB::table('pendapatan')->where('ID',$request->id)->update([
-            'ID' => $request->ID,
             'IDPegawai' => $request->IDPegawai,
             'Bulan' => $request->Bulan,
             'Tahun' => $request->Tahun,

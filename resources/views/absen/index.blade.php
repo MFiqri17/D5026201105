@@ -1,25 +1,21 @@
-
-
-
-
-
-@extends('templates.dashboard');
-<!-- @section('title', 'Data Pendapatan') -->
+@extends('templates.dashboard')
+@section('title', 'Data Absen')
 @section('name', 'Dashboard Absen')
 
 @section('dashboard')
 
+<a class="btn btn-success" href="/absen/tambah"> + Tambah Absen Baru</a>
  
-	<table  class="table">
+	<table  class="table mt-4">
 		<tr  class="table-success">
-				<th>ID Pegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
 		</tr>
 			@foreach($absen as $a)
 		<tr style="color: white;">
-           <td>{{ $a->IDPegawai }}</td>
+           	<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
@@ -31,8 +27,10 @@
 		@endforeach
 	</table>
 
-		<a class="btn btn-success" href="/absen/tambah"> + Tambah Absen Baru</a>
+		{{ $absen->links() }}
+
     
+
 
 
 @endsection

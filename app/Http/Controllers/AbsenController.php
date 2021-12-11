@@ -11,7 +11,9 @@ class AbsenController extends Controller
     public function index()
     {
     	// mengambil data dari table absen
-    	$absen = DB::table('absen')->get();
+    	// $absen = DB::table('absen')->get();
+		$absen = DB::table('absen')->join('pegawai', 'IDPegawai', '=', 'pegawai.pegawai_id')->select('absen.*', 'pegawai.pegawai_nama')->paginate(5);
+
 
     	// mengirim data absen ke view index
     	return view('absen.index',['absen' => $absen]);
@@ -50,10 +52,10 @@ public function edit($id)
 
     $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
 
-    $status = "Sedang Mengedit" ;
+    // $status = "Sedang Mengedit" ;
 
 	// passing data absen yang didapat ke view edit.blade.php
-	return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai,'status' => $status]);
+	return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai]);
 
 }
 

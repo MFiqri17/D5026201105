@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
-@section('title', 'Edit Pegawai')
-@section('name', 'Tambah Pegawai')
+@section('title', 'Detail Pegawai')
+@section('name', 'Detail Pegawai')
 
 @section('css')
 <link href="/css/form.css" rel="stylesheet" />
@@ -11,17 +11,19 @@
  
 	
 	<div class="card">
-        <div class="card-header text-right">Form Tambah Data Pegawai</div>
+        @foreach($pegawai as $p)
+        <div class="card-header text-right">Detail dari {{ $p->pegawai_nama }}</div>
         <div class="card-body">
-
-          <form action="/pegawai/store" method="POST" id="validation" class="row g-3">
-            {{ csrf_field() }}	
+	
+          <form action="/pegawai" method="get" id="validation" class="row g-3">
+            {{ csrf_field() }}
+            	<input type="hidden" name="id" value="{{ $p->pegawai_id }}">
             <div class="row mt-3 justify-content-around">
               <label class="col-lg-5 form-label">
                 <h2> Nama</h2>
               </label>
               <div class="col-lg-7">
-                <input type="text" class="form-control" required="required" id="name" name="nama" >
+                <label type="text" class="form-control" required="required" id="name" name="nama" >{{ $p->pegawai_nama }}</label>
               </div>
             </div>
 
@@ -30,7 +32,7 @@
                 <h2> Jabatan  </h2>
               </label>
               <div class="col-lg-7">
-                <input type="text" class="form-control" required="required" name="jabatan" id="jabatan" >
+                <label type="text" class="form-control" required="required" name="jabatan" id="jabatan" >{{ $p->pegawai_jabatan }}</label>
               </div>
             </div>
 
@@ -39,7 +41,7 @@
                 <h2> Umur  </h2>
               </label>
               <div class="col-lg-7">
-                <input type="number" class="form-control" required="required" name="umur" id="umur" >
+                <label type="number" class="form-control" required="required" name="umur" id="umur" >{{ $p->pegawai_umur }}</label>
               </div>
             </div>
 
@@ -48,7 +50,7 @@
                 <h2> Alamat  </h2>
               </label>
               <div class="col-lg-7">
-                <textarea required="required" name="alamat" class="form-control"></textarea>
+                <label required="required" name="alamat" class="form-control">{{ $p->pegawai_alamat }}</label>
               </div>
             </div>
 
@@ -57,21 +59,26 @@
               <div
                 class="d-flex flex-lg-row flex-column justify-content-center"
               >
-                <a href="/pegawai">
+                
                 <button
-                  type="button"
+                 
                   class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
                 >
                   Kembali
                 </button>
-                </a>
-                 <input type="submit" class="btn blue btn-primary btn-lg" value="Simpan Data" > 
-                </div>
+             
+              </div>
             </div>
           </form>
-      
+          	@endforeach
         </div>
       </div>
 
 
 @endsection
+
+
+
+
+
+   

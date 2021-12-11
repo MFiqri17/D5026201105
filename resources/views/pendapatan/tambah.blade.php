@@ -1,7 +1,5 @@
-
-
-
 @extends('templates.dashboard')
+@section('title', 'Tambah Pendapatan')
 @section('name', 'Tambah Pendapatan')
 
 @section('css')
@@ -18,25 +16,30 @@
         <div class="card-header text-right">Form Tambah Data Pendapatan</div>
         <div class="card-body">
 			
-          <form  id="validation" class="row g-3" action="/pendapatan/update" method="post" >
+          <form  id="validation" class="row g-3" action="/pendapatan/store" method="post" >
 
 		 	 {{ csrf_field() }}
 			 
-            <div class="row mt-3 justify-content-around">
+            <!-- <div class="row mt-3 justify-content-around">
               <label class="col-lg-5 form-label">
                 <h2> ID</h2>
               </label>
               <div class="col-lg-7">
                 <input class="form-control" type="number" name="ID" required="required"  >
               </div>
-            </div>
+            </div> -->
 
             <div class="row my-3 justify-content-around">
               <label class="col-lg-5 form-label">
-                <h2> IDPegawai  </h2>
+                <h2> Nama Pegawai  </h2>
               </label>
               <div class="col-lg-7">
-                <input  class="form-control"  type="number" name="IDPegawai" required="required"  >
+                <!-- <input  class="form-control"  type="number" name="IDPegawai" required="required"  > -->
+                   <select class="form-control" type="number" required="required" name="IDPegawai">
+                                @foreach($pegawai as $p )
+                                    <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
+                                @endforeach
+                            </select>
               </div>
             </div>
 
@@ -86,7 +89,7 @@
               >
                 <a href="/pendapatan">
                 <button
-                 
+                  type="button"
                   class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
                 >
                   Kembali

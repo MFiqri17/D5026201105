@@ -1,14 +1,15 @@
-@extends('templates.dashboard');
-<!-- @section('title', 'Data Pendapatan') -->
+@extends('templates.dashboard')
+@section('title', 'Data Pendapatan')
 @section('name', 'Dashboard Pendapatan')
 
 @section('dashboard')
 
+	<a class="btn btn-success" href="/pendapatan/tambah"> + Tambah Pendapatan Baru</a>
  
-	<table  class="table">
+	<table  class="table mt-4">
 		<tr  class="table-success">
-			<th>ID</th>
-			<th>IDPegawai</th>
+			<!-- <th>ID</th> -->
+			<th>Nama Pegawai</th>
 			<th>Bulan</th>
 			<th>Tahun</th>
 			<th>Gaji</th>
@@ -18,8 +19,8 @@
 		@foreach($pendapatan as $p)
 		<tr style="color: white; ">
             <div  class="table-success">
-			<td>{{ $p->ID }}</td>
-			<td>{{ $p->IDPegawai }}</td>
+			<!-- <td>{{ $p->ID }}</td> -->
+			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->Bulan }}</td>
 			<td>{{ $p->Tahun }}</td>
             <td>{{ $p->Gaji }}</td>
@@ -34,9 +35,9 @@
 		@endforeach
 	</table>
 
-		<a class="btn btn-success" href="/pendapatan/tambah"> + Tambah Pendapatan Baru</a>
+	
     
-
+ {{ $pendapatan->links() }}
 	
 
 @endsection

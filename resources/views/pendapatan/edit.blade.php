@@ -1,4 +1,5 @@
 @extends('templates.dashboard')
+@section('title', 'Edil Pendapatan')
 @section('name', 'Edit Pendapatan')
 
 @section('css')
@@ -19,21 +20,13 @@
 
 		 	 {{ csrf_field() }}
 			  <input type="hidden" name="id" value="{{ $p->ID }}">
-            <div class="row mt-3 justify-content-around">
-              <label class="col-lg-5 form-label">
-                <h2> ID</h2>
-              </label>
-              <div class="col-lg-7">
-                <input class="form-control" type="number" name="ID" required="required" value="{{ $p->ID }}">
-              </div>
-            </div>
 
             <div class="row my-3 justify-content-around">
               <label class="col-lg-5 form-label">
                 <h2> IDPegawai  </h2>
               </label>
               <div class="col-lg-7">
-                <input  class="form-control"  type="number" name="IDPegawai" required="required" value="{{ $p->IDPegawai }}">
+                <input  class="form-control"  type="number" name="IDPegawai" required="required" value="{{ $p->IDPegawai }}"> 
               </div>
             </div>
 
