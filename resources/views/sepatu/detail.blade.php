@@ -69,6 +69,12 @@
         </div>
       </div>
 
+      
+	<div class="text-white mt-5">
+		<h4>Keterangan </h4>
+		<h5>Y : Tersedia</h5>
+		<h5>N : Tidak Tersedia</h5>
+	</div>
 
 @endsection
 

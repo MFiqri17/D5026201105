@@ -67,8 +67,8 @@
           <li><a href="/pegawai" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Pegawai</span></a></li>
           <li><a href="/absen" class="nav-link scrollto"><i class="bx bx-file-blank"></i>  <span>Absen</span></a></li>
           <li><a href="/pendapatan" class="nav-link scrollto"><i class='bx bx-money-withdraw'></i><span>Pendapatan</span></a></li>
-          <li><a href="" class="nav-link scrollto"><i class='bx bx-calendar-week'></i><span>Minggu Depan</span></a></li>
-          <li><a href="/sepatu" class="nav-link scrollto"><i class='bx bx-expand-horizontal'></i><span>Praktikum</span></a></li>
+          <li><a href="#" class="nav-link scrollto"><i class='bx bx-calendar-week'></i><span>Minggu Depan</span></a></li>
+          <li><a href="/sepatu" class="nav-link scrollto"><i class='bx bx-expand-horizontal'></i><span>Praktikum (Sepatu)</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>

@@ -93,12 +93,12 @@ public function cari(Request $request)
 		$cari = $request->cari;
  
     		// mengambil data dari table pegawai sesuai pencarian data
-		$pegawai = DB::table('pegawai')
-		->where('pegawai_nama','like',"%".$cari."%")
+		$sepatu = DB::table('sepatu')
+		->where('merksepatu','like',"%".$cari."%")
 		->paginate();
  
     		// mengirim data pegawai ke view index
-		return view('pegawai.index',['pegawai' => $pegawai]);
+		return view('sepatu.index',['sepatu' => $sepatu]);
  
 	}
 

@@ -72,9 +72,9 @@
                         <label for="nama" class="col-sm-2 control-label">Status </label>
                         <div class='col-sm-4 input-group date' id='nama'>
                             <input type="radio" id="h" name="status" value="H">
-        <label for="h">HADIR</label><br>
+        <label class="ms-3" for="h">HADIR</label><br>
         <input type="radio" id="a" name="status" value="A" checked="checked">
-        <label for="a">TIDAK HADIR</label><br>
+        <label class="ms-3" for="a">TIDAK HADIR</label><br>
         
                         </div>
                     </div>
@@ -88,7 +88,7 @@
               >
                 <a href="/absen">
                 <button
-                 
+                  type="button"
                   class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
                 >
                   Kembali

@@ -8,7 +8,7 @@
 	<form action="/sepatu/cari" method="GET">
 		<div class="row">
 			<div class="col-6">
-				<input class=" form-control " type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}">
+				<input class=" form-control " type="text" name="cari" placeholder="Cari Merk Sepatu .." value="{{ old('cari') }}">
 			</div>
 			<div class="col-4">
 				<button type="submit" class="btn btn-outline-success">Cari</button>
@@ -44,6 +44,12 @@
 	</table>
 
     {{ $sepatu->links() }}
+
+	<div class="text-white mt-5">
+		<h4>Keterangan </h4>
+		<h5>Y : Tersedia</h5>
+		<h5>N : Tidak Tersedia</h5>
+	</div>
 
 
 

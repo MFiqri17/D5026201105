@@ -9,6 +9,7 @@
 	<table  class="table mt-4">
 		<tr  class="table-success">
 			<!-- <th>ID</th> -->
+			<th>No. </th>
 			<th>Nama Pegawai</th>
 			<th>Bulan</th>
 			<th>Tahun</th>
@@ -20,6 +21,7 @@
 		<tr style="color: white; ">
             <div  class="table-success">
 			<!-- <td>{{ $p->ID }}</td> -->
+			<td>{{ $loop->iteration }}</td>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->Bulan }}</td>
 			<td>{{ $p->Tahun }}</td>

@@ -31,15 +31,10 @@
 
             <div class="row my-3 justify-content-around">
               <label class="col-lg-5 form-label">
-                <h2> Nama Pegawai  </h2>
+                <h2> ID Pegawai  </h2>
               </label>
               <div class="col-lg-7">
-                <!-- <input  class="form-control"  type="number" name="IDPegawai" required="required"  > -->
-                   <select class="form-control" type="number" required="required" name="IDPegawai">
-                                @foreach($pegawai as $p )
-                                    <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
-                                @endforeach
-                            </select>
+                <input  class="form-control"  type="number" name="IDPegawai" required="required"  >
               </div>
             </div>
 

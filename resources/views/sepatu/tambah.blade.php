@@ -80,7 +80,7 @@
               >
                 <a href="/sepatu">
                 <button
-                 
+                  type="button"
                   class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
                 >
                   Kembali
