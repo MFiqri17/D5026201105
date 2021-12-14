@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
-@section('title', 'Tambah Pendapatan')
-@section('name', 'Tambah Pendapatan')
+@section('title', 'Detail Pendapatan')
+@section('name', 'Detail Pendapatan')
 
 @section('css')
 <link href="/css/form.css" rel="stylesheet" />
@@ -13,34 +13,21 @@
 
 
 	<div class="card">
-        <div class="card-header text-right">Form Tambah Data Pendapatan</div>
+        @foreach($pendapatan as $p)
+        <div class="card-header text-right">Detail dari {{ $p->pegawai_nama }}</div>
         <div class="card-body">
 			
-          <form  id="validation" class="row g-3" action="/pendapatan/store" method="post" >
+          <form  id="validation" class="row g-3" action="/pendapatan/" method="get" >
 
 		 	 {{ csrf_field() }}
-			 
-            <!-- <div class="row mt-3 justify-content-around">
-              <label class="col-lg-5 form-label">
-                <h2> ID</h2>
-              </label>
-              <div class="col-lg-7">
-                <input class="form-control" type="number" name="ID" required="required"  >
-              </div>
-            </div> -->
+			  <input type="hidden" name="id" value="{{ $p->ID }}">
 
             <div class="row my-3 justify-content-around">
               <label class="col-lg-5 form-label">
                 <h2> Nama Pegawai  </h2>
               </label>
               <div class="col-lg-7">
-                <select class="form-control" name="IDPegawai">
-                <!-- <input  class="form-control"  type="number" name="IDPegawai" required="required"  > -->
-                       @foreach($pegawai as $pg )
-                         <option value="{{ $pg->pegawai_id }}"> {{ $pg->pegawai_nama }}</option>
-                        @endforeach
-                  </select>
-
+                <label  class="form-control"  type="number" name="IDPegawai" required="required" >{{ $p->pegawai_nama }}</label> 
               </div>
             </div>
 
@@ -49,7 +36,7 @@
                 <h2> Bulan  </h2>
               </label>
               <div class="col-lg-7">
-                <input class="form-control" type="number" name="Bulan" required="required"  >
+                <label class="form-control" type="number" name="Bulan" required="required" value="{{ $p->Bulan }}">{{ $p->Bulan }}</label>
               </div>
             </div>
 
@@ -58,7 +45,7 @@
                 <h2> Tahun  </h2>
               </label>
               <div class="col-lg-7">
-               <input class="form-control" type="" name="Tahun" required="required"  >
+               <label class="form-control" type="" name="Tahun" required="required" value="{{ $p->Tahun }}">{{ $p->Tahun }}</label>
               </div>
             </div>
 
@@ -68,7 +55,7 @@
                 <h2> Gaji  </h2>
               </label>
               <div class="col-lg-7">
-                <input  class="form-control" type="number" name="Gaji" required="required"  >
+                <label  class="form-control" type="number" name="Gaji" required="required" value="{{ $p->Gaji }}">{{ $p->Gaji }}</label>
               </div>
             </div>
 
@@ -78,7 +65,7 @@
                 <h2> Tunjangan  </h2>
               </label>
               <div class="col-lg-7">
-                <input  class="form-control" type="number" name="Tunjangan" required="required"  >
+                <label  class="form-control" type="number" name="Tunjangan" required="required" value="{{ $p->Tunjangan }}">{{ $p->Tunjangan }}</label>
               </div>
             </div>
 
@@ -90,25 +77,21 @@
               >
                 <a href="/pendapatan">
                 <button
-                  type="button"
+                 
                   class="btn green me-lg-5 mt-4 mt-lg-0 btn-secondary btn-lg"
                 >
                   Kembali
                 </button>
                 </a>
-                 <input type="submit" class="btn blue btn-primary btn-lg" value="Simpan Data">
+
               </div>
             </div>
           </form>
-          	
+          	@endforeach
         </div>
       </div>
 
 
 
 @endsection
-
-
-
-
 

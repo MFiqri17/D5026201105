@@ -68,10 +68,10 @@ class PendapatanController extends Controller
         // mengambil data pegawai berdasarkan id yang dipilih
         $pendapatan = DB::table('pendapatan')->where('ID',$id)->get();
 
-
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
       
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('pendapatan.edit',['pendapatan' => $pendapatan]);
+        return view('pendapatan.edit',['pendapatan' => $pendapatan, 'pegawai' => $pegawai]);
 
     }
     // update data pegawai
@@ -97,4 +97,40 @@ class PendapatanController extends Controller
         // alihkan halaman ke halaman pegawai
         return redirect('/pendapatan');
     }
+
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pendapatan sesuai pencarian data
+	    $pendapatan = DB::table('pendapatan')
+        ->join('pegawai', 'IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('pendapatan.*', 'pegawai.pegawai_nama')
+        ->distinct()
+		->where('pegawai_nama','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('pendapatan.index',['pendapatan' => $pendapatan]);
+ 
+	}
+
+
+
+
+    		public function view($id)
+{
+	// mengambil data pegawai berdasarkan id yang dipilih
+	
+
+    $pendapatan = DB::table('pendapatan')
+        ->join('pegawai', 'IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('pendapatan.*', 'pegawai.pegawai_nama')
+		->where('ID',$id)->get();
+	// passing data pegawai yang didapat ke view edit.blade.php
+	return view('pendapatan.detail',['pendapatan' => $pendapatan]);
+
+}
 }

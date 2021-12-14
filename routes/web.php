@@ -65,7 +65,8 @@ Route::post('/pendapatan/store','PendapatanController@store');
 Route::get('/pendapatan/edit/{id}','PendapatanController@edit');
 Route::post('/pendapatan/update','PendapatanController@update');
 Route::get('/pendapatan/hapus/{id}','PendapatanController@hapus');
-
+Route::get('/pendapatan/cari','PendapatanController@cari');
+Route::get('/pendapatan/detail/{id}','PendapatanController@view');
 
 
 
@@ -76,8 +77,8 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
-
-
+Route::get('/absen/cari','AbsenController@cari');
+Route::get('/absen/detail/{id}','AbsenController@view');
 
 
 

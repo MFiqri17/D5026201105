@@ -4,7 +4,19 @@
 
 @section('dashboard')
 
-<a class="btn btn-success" href="/absen/tambah"> + Tambah Absen Baru</a>
+<a class="btn btn-success mb-4" href="/absen/tambah"> + Tambah Absen Baru</a>
+
+	<form action="/absen/cari" method="GET">
+		<div class="row">
+			<div class="col-6">
+				<input class=" form-control " type="text" name="cari" placeholder="Cari Absen Pegawai .." value="{{ old('cari') }}">
+			</div>
+			<div class="col-4">
+				<button type="submit" class="btn btn-outline-success">Cari</button>
+			</div>
+		
+		</div>
+	</form>
  
 	<table  class="table mt-4">
 		<tr  class="table-success">
@@ -21,6 +33,8 @@
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
+				<a href="/absen/detail/{{ $a->ID}}">Details</a>
+				|
 				<a href="/absen/edit/{{ $a->ID}}">Edit</a>
 				|
 				<a href="/absen/hapus/{{ $a->ID}}">Hapus</a>

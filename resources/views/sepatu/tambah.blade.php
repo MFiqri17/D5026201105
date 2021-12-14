@@ -30,7 +30,7 @@
                 <h2> Stock  </h2>
               </label>
               <div class="col-lg-7">
-                <input type="text" class="form-control" required="required" name="stock" id="stock" >
+                <input type="number" class="form-control" required="required" name="stock" id="stock" >
               </div>
             </div>
 

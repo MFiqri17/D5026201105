@@ -26,7 +26,12 @@
                 <h2> IDPegawai  </h2>
               </label>
               <div class="col-lg-7">
-                <input  class="form-control"  type="number" name="IDPegawai" required="required" value="{{ $p->IDPegawai }}"> 
+                <select class="form-control" name="IDPegawai">
+                      @foreach($pegawai as $pg )
+                          <option value="{{ $pg->pegawai_id }}" @if($pg->pegawai_id===$p->IDPegawai) selected="selected" @endif>{{ $pg->pegawai_nama }}</option>
+                      @endforeach
+                </select>
+                <!-- <input  class="form-control"  type="number" name="IDPegawai" required="required" value="{{ $p->IDPegawai }}">  -->
               </div>
             </div>
 
