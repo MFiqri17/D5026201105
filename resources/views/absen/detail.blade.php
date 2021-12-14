@@ -17,11 +17,11 @@
  
 
     @foreach($absen as $a)
-    <form action="/absen" method="post">
+    <form action="/absen" method="get">
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{ $a->ID }}">
         <div class="card">
-              <div class="card-header ">Form Tambah Data Pegawai</div>
+              <div class="card-header ">Detail dari Absen {{ $a->pegawai_nama }}</div>
         <div class="card-body">
 
         <div class="container">

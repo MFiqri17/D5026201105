@@ -21,7 +21,7 @@
         {{ csrf_field() }}
 
         <div class="card">
-              <div class="card-header ">Form Tambah Data Pegawai</div>
+              <div class="card-header ">Form Tambah Data Absen</div>
         <div class="card-body">
 
         <div class="container">

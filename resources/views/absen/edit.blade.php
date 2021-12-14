@@ -21,7 +21,7 @@
         {{ csrf_field() }}
         <input type="hidden" name="id" value="{{ $a->ID }}">
         <div class="card">
-              <div class="card-header ">Form Tambah Data Pegawai</div>
+              <div class="card-header ">Form Edit Data Absen</div>
         <div class="card-body">
 
         <div class="container">
@@ -72,9 +72,9 @@
                         <label for="nama" class="col-sm-2 control-label">Status </label>
                         <div class='col-sm-4 input-group date' id='nama'>
                             <input type="radio" id="h" name="status" value="H" @if($a->Status==='H') checked="checked" @endif>
-                            <label for="h">HADIR</label><br>
+                            <label class="ms-3" for="h">HADIR</label><br>
                             <input type="radio" id="a" name="status" value="A" checked="checked" @if($a->Status==='A') checked="checked" @endif>
-                            <label for="a">TIDAK HADIR</label><br>
+                            <label class="ms-3" for="a">TIDAK HADIR</label><br>
         
                         </div>
                     </div>
