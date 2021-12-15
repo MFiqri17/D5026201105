@@ -68,6 +68,7 @@
           <li><a href="/absen" class="nav-link scrollto"><i class="bx bx-file-blank"></i>  <span>Absen</span></a></li>
           <li><a href="/pendapatan" class="nav-link scrollto"><i class='bx bx-money-withdraw'></i><span>Pendapatan</span></a></li>
           <li><a href="/sepatu" class="nav-link scrollto"><i class='bx bx-expand-horizontal'></i><span>Praktikum (Sepatu)</span></a></li>
+          <li><a href="/karyawan1" class="nav-link scrollto"><i class='bx bx-expand-horizontal'></i><span>EAS (Karyawan 1)</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -82,7 +83,20 @@
             <h1 style="color: white;" class="mb-4">Selamat Datang di <b>@yield('name')</b> </h1>
              @yield('dashboard')
         </div>
+
+        
     </div>
+
+    <!-- <div class="row">
+       <footer id="footer" style="margin-top= 120px;">
+    <div class="container">
+      <div class="copyright">
+        &copy; Hak Cipta oleh <strong>
+         <br> <span>5026201105 - M. Fiqri Ananda</span></strong>
+      </div>
+    </div>
+  </footer>
+    </div> -->
  
   </div>
     </main>
@@ -96,7 +110,8 @@
          <br> <span>5026201105 - M. Fiqri Ananda</span></strong>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer> 
+  <!-- End  Footer -->
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
